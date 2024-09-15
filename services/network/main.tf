@@ -27,12 +27,12 @@ resource "aws_subnet" "subnet-A-private" {
   vpc_id = aws_vpc.vpc_main.id
   cidr_block = "10.10.2.0/24"
   availability_zone = "sa-east-1a"
+  map_public_ip_on_launch = false
   tags = {
     Name = "SUBNET-A-PRIVATE"
   }
 
 }
-
 
 # INTERNET GATEWAY 
 
